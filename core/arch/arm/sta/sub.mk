@@ -10,3 +10,5 @@ endif
 ifeq ($(CFG_WITH_USER_TA),y)
 srcs-$(CFG_TEE_FS_KEY_MANAGER_TEST) += tee_fs_key_manager_tests.c
 endif
+
+srcs-$(CFG_SMAF_OPTEE_ALLOCATOR) += smaf_optee_allocator.c

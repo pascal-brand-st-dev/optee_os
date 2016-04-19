@@ -107,7 +107,11 @@
 #error "Unknown platform flavor"
 #endif
 
+#ifdef CFG_SMAF_OPTEE_ALLOCATOR
+#define HEAP_SIZE		(128 * 1024)
+#else
 #define HEAP_SIZE		(24 * 1024)
+#endif
 
 #if PLATFORM_FLAVOR_IS(fvp)
 /*
